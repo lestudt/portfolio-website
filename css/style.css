@@ -1,0 +1,86 @@
+body {
+  background-color: white;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+
+a {
+  color: #BBBBBB;
+  text-decoration: none; /* No underlining */
+}
+a:hover, a:focus {
+  color: #ff7f50;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+a:visited { /* visited link */
+  color: #ff7f50;
+}
+a:active { /* selected link */
+  color: #000000;
+}
+
+
+.button {
+  display: inline-block; 
+  background-color: lightblue;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 20px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+.button:active {
+  opacity: 0.7; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+
+.button.contact {
+  background-color: #002dea;
+  color: white;
+  text-transform: none;
+  border: 0px solid #white;
+}
+.button.contact:hover {
+  background-color: #EBEBEB;
+  color: #002dea;
+  border: 1px solid #002dea;
+}
+.button.contact:active {
+  background-color: #002dea;
+  color: #ffffff;
+}
+
+
+img {
+    width: 100%;
+  }
