@@ -1,3 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* || GENERAL STYLES */
+/* || SITEWIDE */
+
+#header {
+  position: fixed;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid #BEBEBE;
+}
+
 body {
   background-color: white;
   font-family: "proxima-nova", sans-serif;
@@ -5,7 +22,6 @@ body {
   font-style: normal;
   color: black;
 }
-
 
 h1, h2, h3, h4 {
   line-height: 1.4;
@@ -27,48 +43,45 @@ h4 {
   font-weight: 400;
 }
 
-
-a {
+nav > ul > li > a {
   color: #BBBBBB;
-  text-decoration: none; /* No underlining */
+  text-decoration: none; 
 }
-a:hover, a:focus {
+nav > ul > li > a:hover, a:focus {
   color: #ff7f50;
-  text-decoration: underline; /* Underlining when hovering over a link */
+  text-decoration: underline; 
 }
-a:visited { /* visited link */
+nav > ul > li > a:visited { 
   color: #ff7f50;
 }
-a:active { /* selected link */
+nav > ul > li > a:active { 
   color: #000000;
 }
 
-
 .button {
   display: inline-block; 
-  background-color: lightblue;
+  background-color: #ff7f50;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
   border-radius: 20px;
-  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  border-bottom: 2px solid #994c30; 
   transition: 0.2s opacity;
 }
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  opacity: 0.8; /* Reduces the opacity */
   text-decoration: none;
 }
 .button:active {
-  opacity: 0.7; /* Reduces the opacity of the button to 80% */
+  opacity: 0.7; 
   text-decoration: none;
 }
-
 
 .button.contact {
   background-color: #002dea;
   color: white;
   text-transform: none;
-  border: 0px solid #white;
+  border: 0px solid white;
 }
 .button.contact:hover {
   background-color: #EBEBEB;
@@ -81,6 +94,51 @@ a:active { /* selected link */
 }
 
 
+
 img {
     width: 100%;
   }
+
+
+
+/* LAYOUT STYLING */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0; 
+}
+
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+
+#hero h1, h3 {
+  text-align: center; 
+}
+#footer  {
+  text-align: center; 
+}
+
+#hero {
+  background-color: #ffffff;
+  padding: 60px 0px 0px 0px;
+  display: inline-block;
+  margin: 10px
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
