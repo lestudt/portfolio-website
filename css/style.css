@@ -1,10 +1,15 @@
+/*
+Colors used:
+Primary Color (Blue): #;
+Secondary Color (Orange): #;
+*/
+
+
+
+/* || SITEWIDE */
 * {
   box-sizing: border-box;
 }
-
-
-/* || GENERAL STYLES */
-/* || SITEWIDE */
 
 #header {
   position: fixed;
@@ -23,25 +28,30 @@ body {
   color: black;
 }
 
-h1, h2, h3, h4 {
-  line-height: 1.4;
+#hero {
+  background-color: #ffffff;
+  padding: 60px 0px 0px 0px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
 }
-h1 {
-  font-size: 2.75em;
-  font-weight: 700;
-}
-h2 {
-  font-size: 2.25em;
-  font-weight: 700;
-}
-h3 {
-  font-size: 1.75em;
-  font-weight: 400;
-}
-h4 {
-  font-size: 1.35em;
-  font-weight: 400;
-}
+
+#casestudy {text-align: left;}
+
+#heroaboutme {padding: 60px 0; text-align: center}
+#aboutme {text-align: left;}
+
+#hero h1 {text-align: center;}
+
+#heroaboutme h2 {text-align: center;}
+
+h1 {line-height: 1.2;}
+h2, h3, h4 {line-height: 1.4;}
+
+h1 {font-size: 4.00em; font-weight: 700;}
+h2 {font-size: 2.25em; font-weight: 700;}
+h3 {font-size: 1.75em; font-weight: 400;}
+h4 {font-size: 1.35em; font-weight: 400;}
 
 nav > ul > li > a {
   color: #BBBBBB;
@@ -58,18 +68,34 @@ nav > ul > li > a:active {
   color: #000000;
 }
 
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
 .button {
   display: inline-block; 
-  background-color: #ff7f50;
-  color: #ffffff; /* needed to override the default link color */
+  background-color: #ffffff;
+  color: #000000; /* needed to override the default link color */
   font-weight: 400;
-  padding: 10px;
-  border-radius: 20px;
-  border-bottom: 2px solid #994c30; 
-  transition: 0.2s opacity;
+  padding:10px;
+  border-radius: 10px;
+  border-bottom: 2px solid #ffffff; 
+  transition: 0.8s opacity;
 }
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity */
+  opacity: 0.8; 
   text-decoration: none;
 }
 .button:active {
@@ -93,52 +119,118 @@ nav > ul > li > a:active {
   color: #ffffff;
 }
 
-
-
-img {
-    width: 100%;
-  }
+img {width: 100%;}
 
 
 
 /* LAYOUT STYLING */
 
-.container {
-  padding: 0 15px;
+.container {padding: 0 15px;}
+
+.row {margin: 25px 0;}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
 }
 
-.row {
-  margin: 25px 0; 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+#footer  {text-align: center;}
 
-#hero h1, h3 {
-  text-align: center; 
-}
-#footer  {
-  text-align: center; 
+[class*="col-"] {
+  float: left;
+  padding-bottom: 50px;
 }
 
-#hero {
-  background-color: #ffffff;
-  padding: 60px 0px 0px 0px;
-  display: inline-block;
-  margin: 10px
+
+
+/* ANIMATIONS */
+
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
 }
 
-nav > ul {
-  list-style-type: none;
-  padding: 0;
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
-nav > ul > li {
-  display: inline-block;
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
 }
 
-nav > ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation-duration: 34s;
+  animation-name: cloud-move-reverse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+
+/* MEDIA QUERIES */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: center;
+    margin-top: 4px;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
 }
