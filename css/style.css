@@ -15,9 +15,10 @@ Secondary Color (Orange): #;
   position: fixed;
   background-color: #ffffff;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   width: 100%;
-  border-bottom: 2px solid #BEBEBE;
+  border-bottom: 0px solid #BEBEBE;
+  top: 0;
 }
 
 body {
@@ -31,7 +32,6 @@ body {
 #hero {
   background-color: #ffffff;
   padding: 60px 0px 0px 0px;
-  display: inline-block;
   margin: 10px;
   text-align: center;
 }
@@ -60,11 +60,11 @@ nav > ul > li > a {
   text-decoration: none; 
 }
 nav > ul > li > a:hover, a:focus {
-  color: #ff7f50;
+  color: #FF6127;
   text-decoration: underline; 
 }
 nav > ul > li > a:visited { 
-  color: #ff7f50;
+  color: #FF6127;
 }
 nav > ul > li > a:active { 
   color: #000000;
@@ -149,12 +149,8 @@ img {width: 100%;}
 
 .container {padding: 0 15px;}
 
-.row {margin: 25px 0;}
+.row {margin: 10px 0;}
 
-#work .row {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
-}
 
 .row::after {
   content: "";
@@ -166,7 +162,7 @@ img {width: 100%;}
 
 [class*="col-"] {
   float: left;
-  padding-bottom: 50px;
+  padding: 10px;
 }
 
 
@@ -224,7 +220,7 @@ Medium devices (640px and larger)
     padding: 20px 0 13px;
   }
   .col-md-6 {
-    width: 50%;
+    width:50%;
   }
 
 /* Navigation*/
