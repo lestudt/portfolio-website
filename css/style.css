@@ -4,8 +4,6 @@ Primary Color (Blue): #;
 Secondary Color (Orange): #;
 */
 
-
-
 /* || SITEWIDE */
 * {
   box-sizing: border-box;
@@ -17,7 +15,7 @@ Secondary Color (Orange): #;
   text-align: center;
   padding: 5px;
   width: 100%;
-  border-bottom: 0px solid #BEBEBE;
+  border-bottom: 0px solid #bebebe;
   top: 0;
 }
 
@@ -29,6 +27,8 @@ body {
   color: black;
 }
 
+
+/* || Work Page */
 #hero {
   background-color: #ffffff;
   padding: 60px 0px 0px 0px;
@@ -36,50 +36,94 @@ body {
   text-align: center;
 }
 
-#casestudy {text-align: left;}
+#casestudy {
+  text-align: left;
+}
 
-#heroaboutme {padding: 60px 0; text-align: center}
-#aboutme {text-align: left;}
 
-#hero h1 {text-align: center;}
+/* || About Page */
+#heroaboutme {
+  padding: 80px 0px 10px;
+  text-align: center;
+}
 
-#heroaboutme h2 {text-align: center;}
+#aboutme {
+  text-align: left;
+}
 
-h1 {line-height: 1.2;}
-h2, h3, h4 {line-height: 1.4;}
+#hero h1 {
+  text-align: center;
+}
 
-h1 {font-size: 4.00em; font-weight: 700;}
-h2 {font-size: 2.25em; font-weight: 700;}
-h3 {font-size: 1.75em; font-weight: 400;}
-h4 {font-size: 1.35em; font-weight: 400;}
+#heroaboutme h2 {
+  text-align: center;
+}
 
+h1 {
+  line-height: 1.2;
+}
+
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
 
 /* navigation */
-nav > ul > li > a {
-  color: #BBBBBB;
-  text-decoration: none; 
+
+nav {
+  text-align: center;
 }
-nav > ul > li > a:hover, a:focus {
-  color: #FF6127;
-  text-decoration: underline; 
+
+nav>ul>li>a {
+  color: #bbbbbb;
+  text-decoration: none;
 }
-nav > ul > li > a:visited { 
-  color: #FF6127;
+
+nav>ul>li>a:hover,
+a:focus {
+  color: #ff6127;
+  text-decoration: underline;
 }
-nav > ul > li > a:active { 
+
+nav>ul>li>a:visited {
+  color: #ff6127;
+}
+
+nav>ul>li>a:active {
   color: #000000;
 }
 
-nav > ul {
-  list-style-type: none;
+nav>ul {
+  display: inline-block;
   padding: 0;
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-block;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
@@ -105,23 +149,25 @@ nav > ul > li > a {
   border-top: 1px solid rgb(229, 78, 23);
 }
 
-
 .button {
-  display: inline-block; 
+  display: inline-block;
   background-color: #ffffff;
-  color: #000000; /* needed to override the default link color */
+  color: #000000;
+  /* needed to override the default link color */
   font-weight: 400;
-  padding:10px;
+  padding: 10px;
   border-radius: 10px;
-  border-bottom: 2px solid #ffffff; 
+  border-bottom: 2px solid #ffffff;
   transition: 0.8s opacity;
 }
+
 .button:hover {
-  opacity: 0.8; 
+  opacity: 0.8;
   text-decoration: none;
 }
+
 .button:active {
-  opacity: 0.7; 
+  opacity: 0.7;
   text-decoration: none;
 }
 
@@ -131,26 +177,31 @@ nav > ul > li > a {
   text-transform: none;
   border: 0px solid white;
 }
+
 .button.contact:hover {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   color: #002dea;
   border: 1px solid #002dea;
 }
+
 .button.contact:active {
   background-color: #002dea;
   color: #ffffff;
 }
 
-img {width: 100%;}
-
-
+img {
+  width: 100%;
+}
 
 /* LAYOUT STYLING */
 
-.container {padding: 0 15px;}
+.container {
+  padding: 0 30px;
+}
 
-.row {margin: 10px 0;}
-
+.row {
+  margin: 10px 0;
+}
 
 .row::after {
   content: "";
@@ -158,54 +209,24 @@ img {width: 100%;}
   display: table;
 }
 
-#footer  {text-align: center;}
 
 [class*="col-"] {
   float: left;
   padding: 10px;
 }
 
-
-
-/* ANIMATIONS */
-
-@keyframes color-change {
-  from {fill: #edc655;}
-  to {fill: #f76414;}
+/* Adjust the footer style */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Set a fixed height or adjust as needed */
+  background-color: #ffffff;
 }
 
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
-}
-
-.cloud-front {
-  animation-duration: 30s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
-}
-
-.cloud-back {
-  animation-duration: 34s;
-  animation-name: cloud-move-reverse;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+#footer {
+  text-align: center;
+  width: 100%;
 }
 
 
@@ -219,32 +240,33 @@ Medium devices (640px and larger)
     text-align: unset;
     padding: 20px 0 13px;
   }
+
   .col-md-6 {
-    width:50%;
+    width: 50%;
   }
 
-/* Navigation*/
-nav {
-  width: auto;
-  float: right;
-  margin-top: 4px;
-}
-nav > ul > li {
-  display: inline-block;
-}
+  /* Navigation*/
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
 
-nav > ul {
-  margin: 1em 0;
-}
+  nav>ul>li {
+    display: inline-block;
+  }
 
-.navtoggle li:not(:last-child) {
-  display: inline-block;
-}
+  nav>ul {
+    margin: 1em 0;
+  }
 
-.navtoggle li:last-child {
-  display: none;
-}
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
 
+  .navtoggle li:last-child {
+    display: none;
+  }
 }
 
 /* ==============================
@@ -256,17 +278,14 @@ Large devices (1024px or larger)
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-}
+@media only screen and (min-width: 1440px) {}
 
 /* ==============================
 Extra-large devices (1920px or larger)
 ================================= */
-@media only screen and (min-width: 1920px) {
-}
+@media only screen and (min-width: 1920px) {}
