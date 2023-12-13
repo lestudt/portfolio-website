@@ -1,7 +1,7 @@
 /*
 Colors used:
-Primary Color (Blue): #;
-Secondary Color (Orange): #;
+Primary Color (Orange): #ff6127;
+Secondary Color (Grey): #4a4a4a;
 */
 
 /* || SITEWIDE */
@@ -217,16 +217,16 @@ img {
 
 /* Adjust the footer style */
 footer {
-  display: flex;
+  display: bottom;
   justify-content: center;
   align-items: center;
   height: 100px; /* Set a fixed height or adjust as needed */
   background-color: #ffffff;
+  margin-top: 30px; /* Add margin at the top */
 }
 
 #footer {
   text-align: center;
-  width: 100%;
 }
 
 
