@@ -13,7 +13,7 @@ Secondary Color (Grey): #4a4a4a;
   position: fixed;
   background-color: #ffffff;
   text-align: center;
-  padding: 5px;
+  padding: 0px;
   width: 100%;
   border-bottom: 0px solid #bebebe;
   top: 0;
@@ -32,7 +32,7 @@ body {
 #hero {
   background-color: #ffffff;
   padding: 60px 0px 0px 0px;
-  margin: 10px;
+  margin: 30px;
   text-align: center;
 }
 
@@ -75,13 +75,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25em;
-  font-weight: 700;
+  font-size: 1.35em;
+  font-weight: 300;
 }
 
 h3 {
-  font-size: 1.75em;
-  font-weight: 400;
+  font-size: 1.00em;
+  font-weight: 300;
 }
 
 h4 {
