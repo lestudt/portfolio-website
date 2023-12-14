@@ -32,7 +32,7 @@ body {
 #hero {
   background-color: #ffffff;
   color: #333333;
-  padding: 100px 50px 20px;
+  padding: 80px 50px 20px;
   text-align: center;
 }
 
@@ -220,7 +220,7 @@ img {
 
 [class*="col-"] {
   float: left;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 /* Adjust the footer style */
