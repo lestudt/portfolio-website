@@ -11,11 +11,11 @@ Secondary Color (Grey): #4a4a4a;
 
 #header {
   position: fixed;
-  background-color: #ffffff;
+  background-color: white;
   text-align: center;
   padding: 0px;
   width: 100%;
-  border-bottom: 0px solid #bebebe;
+  border-bottom: 0px solid;
   top: 0;
 }
 
@@ -24,15 +24,15 @@ body {
   font-family: "proxima-nova", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: black;
+  color: #333333;
 }
 
 
 /* || Work Page */
 #hero {
   background-color: #ffffff;
-  padding: 60px 0px 0px 0px;
-  margin: 30px;
+  color: #333333;
+  padding: 100px 50px 20px;
   text-align: center;
 }
 
@@ -43,7 +43,7 @@ body {
 
 /* || About Page */
 #heroaboutme {
-  padding: 80px 0px 10px;
+  padding: 100px 60px 10px;
   text-align: center;
 }
 
@@ -59,8 +59,13 @@ body {
   text-align: center;
 }
 
+
+/* typography */
+
 h1 {
-  line-height: 1.2;
+  line-height: 1;
+  font-size: 5em;
+  font-weight: 700;
 }
 
 h2,
@@ -69,13 +74,8 @@ h4 {
   line-height: 1.4;
 }
 
-h1 {
-  font-size: 4em;
-  font-weight: 700;
-}
-
 h2 {
-  font-size: 1.35em;
+  font-size: 1.45em;
   font-weight: 300;
 }
 
@@ -96,7 +96,7 @@ nav {
 }
 
 nav>ul>li>a {
-  color: #bbbbbb;
+  color: #6a6969;
   text-decoration: none;
 }
 
@@ -107,11 +107,11 @@ a:focus {
 }
 
 nav>ul>li>a:visited {
-  color: #ff6127;
+  color: #6a6969;
 }
 
 nav>ul>li>a:active {
-  color: #000000;
+  color: #ff6127;
 }
 
 nav>ul {
@@ -125,9 +125,9 @@ nav>ul>li {
 
 nav>ul>li>a {
   padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #6a6969;
 }
 
 /* hamburger menu */
@@ -149,16 +149,21 @@ nav>ul>li>a {
   border-top: 1px solid rgb(229, 78, 23);
 }
 
+
+/* button */
+
 .button {
   display: inline-block;
   background-color: #ffffff;
-  color: #000000;
-  /* needed to override the default link color */
+  color: #333333; /* needed to override the default link color */
+  font-size: medium;
   font-weight: 400;
-  padding: 10px;
-  border-radius: 10px;
-  border-bottom: 2px solid #ffffff;
+  text-align: center;
+  padding: 5px 0px 0px 15px;
+  border-radius: 0px;
+  border-bottom: 0px solid #ffffff;
   transition: 0.8s opacity;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -179,24 +184,27 @@ nav>ul>li>a {
 }
 
 .button.contact:hover {
-  background-color: #ebebeb;
+  background-color: white;
   color: #002dea;
   border: 1px solid #002dea;
 }
 
 .button.contact:active {
-  background-color: #002dea;
-  color: #ffffff;
+  background-color: white;
+  color: white;
 }
 
 img {
   width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+
 }
 
 /* LAYOUT STYLING */
 
 .container {
-  padding: 0 30px;
+  padding: 0px 60px 0px;
 }
 
 .row {
@@ -212,7 +220,7 @@ img {
 
 [class*="col-"] {
   float: left;
-  padding: 10px;
+  padding: 0px 20px;
 }
 
 /* Adjust the footer style */
@@ -222,11 +230,12 @@ footer {
   align-items: center;
   height: 100px; /* Set a fixed height or adjust as needed */
   background-color: #ffffff;
-  margin-top: 30px; /* Add margin at the top */
+  padding: 50px 0px 10px 10px;
 }
 
 #footer {
   text-align: center;
+  font-size: x-small;
 }
 
 
@@ -248,7 +257,7 @@ Medium devices (640px and larger)
   /* Navigation*/
   nav {
     width: auto;
-    float: right;
+    float: center;
     margin-top: 4px;
   }
 
